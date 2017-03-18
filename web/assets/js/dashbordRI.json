@@ -1,0 +1,32 @@
+
+    {
+             
+             "powerlostday":"50",
+             "powerlostweek":"220",
+             "totalconsumption":"500",
+             "consumptionthisday":"10", 
+             "consumptionthisnowP":2,
+             "consumptionthisnowU":110,
+             "consumptionthisnowI":10,
+             "maxI":40,
+             "maxp":80,
+             "maxU":220,
+                 
+           
+             
+             "title": "ACI",
+             "id"   : "1",
+             "monycost": 
+                 {
+                     "monycostm":"10",
+                     "currency":"TND"
+                 }
+                        
+        
+            
+           
+             
+       
+    
+    }
+   

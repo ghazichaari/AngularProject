@@ -1,0 +1,30 @@
+[{                  
+        "id":"dontchart1",
+	"data": 18,
+        "label": "room1"
+                                                         
+},
+{                  
+        
+	"data": 10,
+        "label": "room2"
+                                                         
+},
+{                  
+      
+	"data": 12,
+        "label": "room3"
+                                                         
+},
+{                  
+        
+	"data": 36,
+        "label": "room4"
+                                                         
+},
+{                  
+        
+	"data": 36,
+        "label": "room5"
+                                                         
+}]

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+    <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>cursen</title>
+
+        <meta name="description" content="simple contextMenu generator for interactive web applications based on jQuery" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/boo-extension.css" rel="stylesheet">
+        <link href="assets/css/boo.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/boo-coloring.css" rel="stylesheet">
+
+        <!--<script src="screen.js" type="text/javascript"></script>-->
+        <link href="assets/css/boo-utility.css" rel="stylesheet">
+        <link href="src/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+         <link href="tree.css" rel="stylesheet" type="text/css" />
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="assets/plugins/selectivizr/selectivizr-min.js"></script>
+            <script src="assets/plugins/flot/excanvas.min.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <script src="assets/js/newjavascript.js"></script>
+    </head>
+
+    <body class="sidebar-left "  ng-app="myApp" ng-controller='customersCtrl'>
+
+
+
+
+
+        <div class="page-container">
+            <div id="header-container">
+                <div id="header">
+
+                    <div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="navbar-inner" >
+                            <div class="container-fluid"  >
+                                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                <a class="brand" href="javascript:void(0);"><img src="assets/img/demo/logo-brand.png"  width="20%" height="10%"></a>
+                                <div class="search-global">
+                                    <input id="globalSearch" class="search search-query input-medium" type="search">
+                                    <a class="search-button" href="javascript:void(0);"><i class="fontello-icon-search-5"></i></a> </div>
+                                <div class="nav-collapse collapse">
+                                    <ul class="nav user-menu visible-desktop">
+                                        <li><a class="btn-glyph fontello-icon-lifebuoy tip-bc" href="javascript:void(0);" title="Alert"><span class="badge badge-important">4</span></a></li>
+                                    </ul>
+                                    <ul class="nav">
+                                        <li class="active"> <a href="index.html">Dashboard</a> </li>
+
+                                        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fontello-icon-list-1"></span>Customize <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+
+                                                <li><a>profil</a></li>
+                                                <li class="dropdown-submenu"><a tabindex="-1" href="javascript:void(0);">log out</a></li>
+                                                <li class="divider"></li>
+                                                <li class="nav-header">Next Update</li>
+                                                <li><a tabindex="-1" href="javascript:void(0);">Contacts</a></li>
+                                                <li><a tabindex="-1" href="javascript:void(0);">Email</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- // navbar -->
+
+                    <div class="header-drawer">
+                        <div class="mobile-nav text-center visible-phone"> <a href="javascript:void(0);" class="mobile-btn" data-toggle="collapse" data-target=".sidebar"><i class="aweso-icon-chevron-down"></i> Components</a> </div>
+                        <!-- // Resposive navigation -->
+                        <div class="breadcrumbs-nav hidden-phone">
+                            <ul id="breadcrumbs" class="breadcrumb">
+                                <li><a href="javascript:void(0);"><i class="fontello-icon-home f12"></i> Dashboard</a> <span class="divider">/</span></li>
+                                <li class="dropdown"><a href="javascript:void(0);">Table </a> <span class="divider">/</span>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Table</a></li>
+                                        <li><a href="javascript:void(0);">Elements</a></li>
+                                        <li><a href="javascript:void(0);">Elements</a></li>
+                                        <li><a href="javascript:void(0);">Elements</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active">cursen </li>
+                            </ul>
+                        </div>
+                        <!-- // breadcrumbs --> 
+                    </div>
+                    <!-- // drawer --> 
+                </div>
+            </div>
+            <!-- // header-container -->
+
+            <div id="main-container">
+               
+                <div id="main-sidebar" class="sidebar sidebar-inverse" >
+                     <div style=" position:absolute; height:100%;  width: 100%;  overflow-x:scroll; overflow-y: scroll; ">
+                    <div class="sidebar-item">
+                        <div class="media profile">
+                            <div class="media-thumb media-left thumb-bordereb"> <a class="img-shadow" href="javascript:void(0);"><img class="thumb" src="assets/img/demo/demo-avatar9604.jpg"></a> </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">hi factory this is your profile <small> you can check your consumption</small></h5>
+                                <p class="data">nice day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // sidebar item - profile -->
+                    <!--                <div data-toggle="dropdown" class="accordion-toggle">
+                                         <script type="text/ng-template" id="categoryTree">
+                                              {{ tree.title }} 
+                                  <ul  class="nav nav-list nav-side" ng-if="tree.aci" >
+                                      <li class="accordion-group" ng-repeat="tree in tree.aci"  >     <a href="#{{tree.aci}}" data-toggle="collapse"> 
+                    <div class="context-menu-2 box menu-1 accordion-toggle"><i class="fontello-icon-right-dir" ><div ng-include="'categoryTree'">  </div></i></div></a>
+                    
+                    
+                    
+                                            </li>
+                    
+                                        </ul>
+                                </script> <ul  class="nav nav-list nav-side"  id="{{tree.aci}}">
+                                            <li class="accordion-group" ng-repeat="tree in aci">
+                    <div class="context-menu-one box menu-1" > <a  data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor" ></span><i class="chevron fontello-icon-right-open-3"></i><div  ng-include="'categoryTree'"> </div> </a> </div>
+                    
+                    
+                                            </li>
+                    
+                                        </ul>
+                               
+                                   </div>-->
+          
+  <div >
+    <div
+      data-angular-treeview="true"
+      data-tree-id="mytree"
+      data-tree-model="roleList"
+      data-node-id="roleId"
+      data-node-label="roleName"
+      data-node-children="children" >
+    </div>
+ 
+</div>
+<!--                    <ul id="mainSideMenu" class="nav nav-list nav-side">
+                        <li class="accordion-group">
+                            <div class="context-menu-one box menu-1" > <a href="#accDash" data-parent="#mainSideMenu" data-toggle="collapse" class="accordion-toggle"> <span class="item-icon fontello-icon-monitor" ></span><i class="chevron fontello-icon-right-open-3"></i><div> AcI </div> </a> </div>
+                            <ul class="accordion-content nav nav-list collapse in" id="accDash">
+                                <li> <a href="#acc2" > <div class="context-menu-2 box menu-1 accordion-toggle"><i class="fontello-icon-right-dir" > Zone</i></div></a></li>
+                                <li> <a href="#acc2"  data-toggle="collapse"> <div class="context-menu-2 box menu-1 accordion-toggle "><i class="fontello-icon-right-dir"> Zone Tow</i></div></a>
+                                    <ul class="accordion-content nav nav-list collapse in" id="acc2">
+                                        <li> <a href="#acc3" data-toggle="collapse"> <div  class="context-menu-3 box menu-1 accordion-toggle" ><i class="fontello-icon-right-dir">Room1</i> </div></a>
+                                            <ul class="accordion-content nav nav-list collapse in" id="acc3">
+                                                <li><div class="context-menu-4 box menu-1 accordion-toggle" > <i class="fontello-icon-right-dir">Room B</i></div></li>
+                                            </ul>
+                                        </li>
+                                        <li> <a href="#acc4"><div  class="context-menu-4 box menu-1 accordion-toggle" >  <i class="fontello-icon-right-dir"> Room2</i></div></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>-->
+                    <!-- // sidebar menu -->
+<!--<div ng-app="myApp" ng-controller='customersCtrl'>
+            <script type="text/ng-template" id="zonesTree">
+                {{ zones.title }}
+                <ul ng-if="zones.zones">
+                <li ng-repeat="zones in zones.zones" ng-include="'zonesTree'">           
+                </li>
+                </ul>
+            </script>
+            <ul>
+                <li ng-repeat="zones in zones" ng-include="'zonesTree'"></li>
+            </ul>    
+        </div>-->
+                    <!--<div class="sidebar-item"></div>-->
+                    <!-- // sidebar item --> 
+
+
+                </div>
+                </div>
+                <!-- // sidebar -->
+
+                <div id="main-content" class="main-content container-fluid">
+                    <div class="row-fluid page-head">
+                        <h2 class="page-title"><i class="fontello-icon-monitor"></i>Visualization, consumption control {{response.title}}</h2>
+                        <ul class="btn-toolbar">                       
+                            <li><a href="factory.html"  class="btn btn-green">Daily archives</a></li> 
+                            <li><a href="factory_archive.html"  class="btn btn-green">Archives</a></li> 
+                            <li><a href="rapport.html"  class="btn btn-green">rapport </a></li> </ul>
+                        <p class="pagedesc"> </p>
+                        <div class="page-bar">
+                            <div class="btn-toolbar"> </div>
+                        </div>
+                    </div>
+                    <!-- // page head -->
+
+                    <div id="page-content" class="page-content">
+
+                        <section>
+                            <div class="row-fluid margin-top20">
+                                <div class="span12 well well-black">
+                                    <div class="row-fluid">
+
+                                        <!-- // column -->
+
+                                        <div class="span6 grider">
+                                            <div class="row-fluid">
+
+                                                <div class="span6 grider-item">
+                                                    <div class="row-fluid">
+                                                        <div class="span12 grider-item">
+
+                                                            <div class="statistic-box well well-black">
+                                                                <div class="section-title">
+                                                                    <h6 class="upper"><i class="fontello-icon-back-in-time"></i>percentage of consumption of power</h6>
+                                                                </div>
+                                                                <div class="section-content">
+                                                                    <div class="circle-content">
+                                                                        <div class="circle circle-shadow padding5">
+                                                                            <input data-readonly=false type="text" data-width="100" data-height="100" data-fgcolor="#48a438" data-bgcolor="#43474a" data-thickness=".32" class="dial-1" rel="75" value="0" >
+                                                                        </div>
+                                                                    </div>
+                                                                    <h2 class="statistic-values">P</h2>
+                                                                    <span class="help-block"></span> </div>
+                                                                <!-- // content --> 
+
+                                                            </div>
+                                                            <div>
+
+                                                                <!-- // Statistic Box  --> 
+                                                            </div>
+                                                            <div>
+                                                                <div class="statistic-box well well-black">
+                                                                    <div class="section-title">
+                                                                        <h6 class="upper">Tension</h6>
+                                                                    </div>
+                                                                    <div class="section-content">
+                                                                        <div class="circle-content">
+                                                                            <div>
+                                                                                <input data-readonly=false type="text" data-width="100" data-height="100" data-fgcolor="#dbb703" data-bgcolor="#43474a" data-thickness=".32" class="dial-2" rel="75" value="0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="statistic-values">U</h2>
+                                                                        <span class="help-block"></span> </div>
+                                                                    <!-- // content --> 
+
+                                                                </div>
+                                                                <!-- // Statistic Box  --> 
+                                                            </div>
+                                                            <div>
+                                                                <div class="statistic-box well well-black">
+                                                                    <div class="section-title">
+                                                                        <h6 class="upper">intensity </h6>
+                                                                    </div>
+                                                                    <div class="section-content">
+                                                                        <div class="circle-content">
+                                                                            <div class="circle circle-shadow padding5">
+                                                                                <input data-readonly=false type="text" data-width="100" data-height="100" data-fgcolor="#222222" data-bgcolor="#43474a" data-thickness=".32" class="dial-3" rel="75" value="0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="statistic-values">I</h2>
+                                                                        <span class="help-block"></span> </div>
+                                                                    <!-- // content --> 
+
+                                                                </div>
+
+                                                                <!-- // Statistic Box  --> 
+                                                            </div>
+
+                                                            <!-- // box --> 
+                                                        </div>
+                                                        <!-- // column --> 
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="span6 grider-item">
+                                                    <div class="row-fluid">
+                                                        <div class="span12 grider-item">
+                                                            <div class="statistic-box well well-black">
+                                                                <div class="section-title">
+                                                                    <h5><i class="fontello-icon-back-in-time"></i> Total Power Lost </h5>
+                                                                </div>
+                                                                <div class="section-content item" >
+                                                                    <h4 class="statistic-values pull-left padding-right10"> <span class="section-icon"><i class="fontello-icon-lifebuoy"></i></span> {{response.powerlostweek}} </h4>
+                                                                    <span> Power Lost in this week</span> </div>
+                                                                <div class="section-content" >
+                                                                    <h4 class="statistic-values pull-left padding-right10"> <span class="section-icon"><i class="fontello-icon-lifebuoy"></i></span> {{response.powerlostday}} </h4>
+                                                                    <span> Power Lost in this day</span> </div>
+                                                            </div>
+                                                            <!-- // box --> 
+                                                        </div>
+                                                        <!-- // column --> 
+                                                    </div>
+                                                    <!-- // Example row -->
+
+                                                    <div class="row-fluid">
+                                                        <div class="span12 grider-item">
+                                                            <ul class="nav nav-well">
+                                                                <li><a class="well well-black" href="javascript:void(0);"><i class="fontello-icon-archive"></i>
+                                                                        <h4 class="statistic-values pull-right">{{response.totalconsumption}}</h4>
+                                                                        Total consumption (this month)</a></li>
+                                                                <li><a class="well well-black" href="javascript:void(0);"><i class="fontello-icon-archive"></i>
+                                                                        <h4 class="statistic-values pull-right">{{response.consumptionthisday}}</h4>
+                                                                        Consumption  (this day)</a></li>
+                                                                <li><a class="well well-black" href="javascript:void(0);"><i class="fontello-icon-archive"></i>
+                                                                        <h4 class="statistic-values pull-right">{{response.consumptionthisnowP}}</h4>
+                                                                        Consumption (now) </a></li>
+
+                                                            </ul>
+                                                            <!-- // statistic nav --> 
+                                                        </div>
+
+                                                        <!-- // column --> 
+                                                    </div>
+                                                    <!-- // Example row --> 
+                                                    <div class="row-fluid">
+                                                        <div class="span12 grider-item">
+                                                            <div class="statistic-box well well-black well-impressed">
+                                                                <div class="section-title">
+                                                                    <h5><i class="fontello-icon-user"></i> money cost this month</h5>
+                                                                </div>
+                                                                <div class="section-content">
+                                                                    <h2 class="statistic-values">{{response.monycost.monycostm}} {{response.monycost.currency}} <span class="positive">
+                                                                            <!--                                                                            <i class="indicator fontello-icon-up-dir"></i><sup>-4,460</sup></span>7-->
+                                                                    </h2>
+                                                                    <span class="info-block">Unique Visits Previous 30 days: 10,268</span> </div>
+                                                            </div>
+                                                            <!-- // box --> 
+                                                        </div>
+                                                        <!-- // column --> 
+                                                    </div>
+                                                </div>
+                                                <!-- // column -->
+
+                                                <!-- // column --> 
+
+                                            </div>
+                                            <!-- // Example row --> 
+                                        </div>
+                                        <!-- // column --> 
+                                        <div class="span6 grider">
+                                            <h3><i class="fontello-icon-chart-bar-3"></i> Daily Consumption</h3>
+                                            <p class="pagedesc"></p>
+                                            <hr class="margin-mx">
+                                            <div id="dashChartVisitors" style="width:100%; height:170px" class="margin-bottom32"> </div>
+                                            <!-- // Chart 1 -->
+                                            <div id="dashChartVisitorsOverview" style="width:99%;height:45px"> </div>
+                                            <!-- // Chart 2 -->
+                                            <ul class="btn-toolbar"> 
+                                                <li><a id="setLastHours" class="btn btn-green">last 24 hours</a></li> 
+                                                <li><a id="setLastSevenDays" class="btn btn-green">last 7 days</a> </li>
+                                                <li><a id="setLastFortnight" class="btn btn-green">last 14 days</a> </li>
+                                                <!--<li><a id="clearSelection" class="btn btn-red">Clear</a> </li>-->
+                                                <li><a class="btn btn-grey" href="#">View details &raquo;</a> </li>
+                                            </ul>
+                                            <div id="dashChartVisitors1" style="width:100%; height:170px"> </div>
+                                            <!-- // Chart 1 -->
+                                            <div id="dashChartVisitorsOverview1" style="width:99%;height:45px"> </div>
+                                            <ul class="btn-toolbar"> 
+                                                <li><a id="setLastHours1" class="btn btn-green">last 24 hours</a></li> 
+                                                <li><a id="setLastSevenDays1" class="btn btn-green">last 7 days</a> </li>
+                                                <li><a id="setLastFortnight1" class="btn btn-green">last 14 days</a> </li>
+                                                <!--                                                <li><a id="clearSelection2" class="btn btn-red">Clear</a> </li>-->
+
+                                                <li><a class="btn btn-grey" href="#">View details &raquo;</a> </li>
+                                            </ul>
+                                            <hr class="mm" />
+                                            <div id="dashChartVisitors2" style="width:100%; height:170px"> </div>
+                                            <!-- // Chart 1 -->
+                                            <div id="dashChartVisitorsOverview2" style="width:99%;height:45px"> </div>
+                                            <!-- // Chart block -->
+                                            <ul class="btn-toolbar"> 
+                                                <li><a id="setLastHours2" class="btn btn-green">last 24 hours</a></li> 
+                                                <li><a id="setLastSevenDays2" class="btn btn-green">last 7 days</a> </li>
+                                                <li><a id="setLastFortnight2" class="btn btn-green">last 14 days</a> </li>
+                                                <!--<li><a id="clearSelection2" class="btn btn-red">Clear</a> </li>-->
+                                                <li><a class="btn btn-grey" href="#">View details &raquo;</a> </li>
+                                            </ul>
+                                            <div class="row-fluid">
+                                                <div class="span12">
+                                                    <table class="table table-condensed">
+                                                        <tbody>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- // Example row --> 
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- // column --> 
+
+                            </div>
+                            <!-- // Example row --> 
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer-fix">
+
+
+                <div id="footer-content" class="footer-content">
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-inner">
+                            <ul class="nav pull-left">
+                                <li class="divider-vertical hidden-phone"></li>
+                                <li><a id="btnToggleSidebar" class="btn-glyph fontello-icon-resize-full-2 tip hidden-phone" href="javascript:void(0);" title="show hide sidebar"></a></li>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- // footer content --> 
+
+            </footer>
+            <!-- // footer-fix  --> 
+
+        </div>
+        <!-- // page-container  --> 
+
+        <!-- Le javascript --> 
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!--<script src="test.json"></script>-->
+        <script src="assets/js/lib/jquery.js"></script>
+        <script src="assets/js/angular-1.3.15/angular.min.js"></script>
+        <script src="assets/js/testjs.js"></script>
+        <script src="assets/js/lib/jquery-ui.js"></script>
+        <script src="assets/js/lib/jquery.cookie.js"></script> 
+        <!--<script src="assets/js/lib/jquery.date.js"></script>--> 
+        <!--<script src="assets/js/lib/jquery.mousewheel.js"></script>--> 
+        <script src="assets/js/lib/jquery.load-image.min.js"></script>
+        <script src="assets/js/lib/bootstrap/bootstrap.js"></script> 
+        <!-- Plugins Bootstrap -->
+
+        <script src="assets/plugins/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="src/jquery.contextMenu.js" type="text/javascript"></script>
+
+        <script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script> 
+        <script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+        <!--<script src="assets/plugins/bootstrap-fuelux/all-fuelux.min.js"></script>--> 
+        <!--<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>--> 
+        <!--<script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>--> 
+        <!--<script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>-->
+        <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+        <script src="assets/plugins/bootstrap-daterangepicker/js/bootstrap-daterangepicker.js"></script> 
+        <script src="assets/plugins/bootstrap-toggle-button/js/bootstrap-toggle-button.js"></script> 
+        <script src="assets/plugins/bootstrap-fileupload/js/bootstrap-fileupload.js"></script> 
+        <script src="assets/plugins/bootstrap-rowlink/js/bootstrap-rowlink.js"></script> 
+        <script src="assets/plugins/bootstrap-progressbar/js/bootstrap-progressbar.js"></script> 
+        <script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script> 
+        <script src="assets/plugins/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> 
+        <script src="assets/plugins/bootstrap-bootbox/bootbox.min.js"></script> 
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script> 
+        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script> 
+        <script src="assets/plugins/bootstrap-wizard/js/bootstrap-wizard.min.js"></script>
+        <script src="assets/plugins/bootstrap-wizard-2/js/bwizard-only.min.js"></script>
+        <script src="assets/plugins/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js"></script>
+
+
+        <!-- Plugins Custom - Only example --> 
+        <!--<script src="assets/plugins/pl-extension/google-code-prettify/prettify.js"></script>-->
+
+        <!-- Plugins Custom - System --> 
+        <script src="assets/plugins/pl-system/nicescroll/jquery.nicescroll.min.js"></script> 
+        <script src="assets/plugins/pl-system/xbreadcrumbs/xbreadcrumbs.js"></script> 
+
+        <!-- Plugins Custom - System info -->
+        <script src="assets/plugins/pl-system-info/qtip2/dist/jquery.qtip.min.js"></script> 
+        <script src="assets/plugins/pl-system-info/gritter/js/jquery.gritter.min.js"></script> 
+        <script src="assets/plugins/pl-system-info/notyfy/jquery.notyfy.js"></script>
+
+        <!-- Plugins Custom - Content -->
+        <script src="assets/plugins/pl-content/list/js/list.min.js"></script> 
+        <script src="assets/plugins/pl-content/list/plugins/list.paging.min.js"></script>
+        <script src="assets/plugins/pl-content/jpages/js/jPages.js"></script> 
+
+        <!-- Plugins Custom - Component -->
+        <script src="assets/plugins/pl-component/fullcalendar/fullcalendar.min.js"></script> 
+        <script src="assets/plugins/pl-component/rangeslider/jqallrangesliders.min.js"></script>
+
+        <!-- Plugins Custom - Form -->
+        <script src="assets/plugins/pl-form/uniform/jquery.uniform.min.js"></script> 
+        <script src="assets/plugins/pl-form/select2/select2.min.js"></script>
+        <script src="assets/plugins/pl-form/counter/jquery.counter.js"></script> 
+        <script src="assets/plugins/pl-form/elastic/jquery.elastic.js"></script> 
+        <script src="assets/plugins/pl-form/inputmask/jquery.inputmask.js"></script> 
+        <script src="assets/plugins/pl-form/inputmask/jquery.inputmask.extensions.js"></script> 
+        <script src="assets/plugins/pl-form/validate/js/jquery.validate.min.js"></script> 
+        <script src="assets/plugins/pl-form/duallistbox/jquery.duallistbox.min.js"></script>
+
+        <!-- Plugins Custom - Gallery --> 
+        <script src="assets/plugins/pl-gallery/nailthumb/jquery.nailthumb.1.1.min.js"></script> 
+        <script src="assets/plugins/pl-gallery/nailthumb/showLoading/js/jquery.showLoading.min.js"></script>
+        <script src="assets/plugins/pl-gallery/wookmark/jquery.imagesloaded.js"></script>
+        <script src="assets/plugins/pl-gallery/wookmark/jquery.wookmark.min.js"></script>
+
+        <!-- Plugins Tables --> 
+        <script src="assets/plugins/pl-table/datatables/media/js/jquery.dataTables.js"></script> 
+        <script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.plugins.js"></script> 
+        <script src="assets/plugins/pl-table/datatables/plugin/jquery.dataTables.columnFilter.js"></script> 
+
+        <!-- Plugins data visualization --> 
+        <script src="assets/plugins/pl-visualization/sparkline/jquery.sparkline.min.js"></script> 
+        <!--<script src="assets/plugins/pl-visualization/easy-pie-chart/jquery.easy-pie-chart.js"></script>--> 
+        <script src="assets/plugins/pl-visualization/percentageloader/percentageloader.min.js"></script>
+        <script src="assets/plugins/pl-visualization/knob/knob.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.categories.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.grow.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.orderBars.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.pie.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.resize.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.selection.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.stack.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.stackpercent.js"></script> 
+        <script src="assets/plugins/pl-visualization/flot/jquery.flot.time.js"></script> 
+
+        <!-- main js --> 
+        <script src="assets/js/core.js"></script> 
+        <script src="assets/js/application.js"></script>   
+
+        <!-- Only This Demo Page --> 
+        <script src="assets/js/demo/demo-dashboard1.js"></script>
+        <!--        <script src="assets/js/demo/demo_intensite.js"></script>-->
+        <!--        <script src="assets/js/demo/demo_tension.js"></script>-->
+
+        <script src="assets/js/testjs.js"></script> 
+         <script src="newjavascript.js"></script> 
+        <script type="text/javascript">
+        $(function () {
+            $.contextMenu({
+                selector: '.menu-1',
+                callback: function (key) {
+                    var m = "clicked: " + key;
+                    window.console && console.log(m) || alert(m);
+                },
+                items: {
+                    "Daily archives": {name: "daily archives"},
+                    "Archive": {name: "Archive"},
+                    "Alert": {name: "Alert"},
+                    "quit": {name: "Quit"}
+
+                }
+            });
+
+            $('.context-menu-1').on('click', function (e) {
+                console.log('clicked', this);
+            });
+        });
+        </script>
+
+        <!--              <script>
+        
+        $.getJSON( "test.json", function( jsonn ) {
+                        $('.dial-2').val(0).trigger('change').delay(2000);
+                        $(".dial-2").knob({
+                            'min': 0,
+                            'max':jsonn.maxU ,
+                            'readOnly': true,
+                            'dynamicDraw': true,
+                            'thickness': 0.2,
+                            'tickColorizeValues': true,
+                            'skin': 'tron'
+                        })
+        
+                        var tmr = self.setInterval(function () {
+                            myDelay2();
+                        }, 50);
+                        var m = 0;
+        
+                        function myDelay2() {
+                            m += 1;
+                            $('.dial-2').val(m).trigger('change');    
+                            if (m == jsonn.consumptionthisnowU) {
+                                window.clearInterval(tmr);
+                            }
+                        }
+        
+        
+                    });
+                    $.getJSON( "test.json", function( jsonn ) {
+                        $('.dial-1').val(0).trigger('change').delay(2000);
+                        $(".dial-1").knob({
+                            'min': 0,
+                            'max': jsonn.maxp,
+                            'readOnly': true,
+                            'dynamicDraw': true,
+                            'thickness': 0.2,
+                            'tickColorizeValues': true,
+                            'skin': 'tron'
+                        })
+        
+                        var tmr = self.setInterval(function () {
+                            myDelay1();
+                        }, 50);
+                        var m = 0;
+        
+                        function myDelay1() {
+                            m += 1;
+                            $('.dial-1').val(m).trigger('change');    
+                            if (m == jsonn.consumptionthisnowP) {
+                                window.clearInterval(tmr);
+                            }
+                        }
+        
+        
+                    });
+                            $.getJSON( "test.json", function( jsonn ) {
+                        $('.dial-3').val(0).trigger('change').delay(2000);
+                        $(".dial-3").knob({
+                            'min': 0,
+                            'max': jsonn.maxI,
+                            'readOnly': true,
+                            'dynamicDraw': true,
+                            'thickness': 0.2,
+                            'tickColorizeValues': true,
+                            'skin': 'tron'
+                        })
+        
+                        var tmr = self.setInterval(function () {
+                            myDelay3();
+                        }, 50);
+                        var m = 0;
+        
+                        function myDelay3() {
+                            m += 1;
+                            $('.dial-3').val(m).trigger('change');    
+                            if (m == jsonn.consumptionthisnowI) {
+                                window.clearInterval(tmr);
+                            }
+                        }
+        
+        
+                    });
+        
+                </script>
+        -->
+
+    </body>
+</html>

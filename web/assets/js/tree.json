@@ -1,0 +1,39 @@
+[
+            {"roleName": "Aci", "roleId": "role1", "children": [
+                    {"roleName": "Zonne1", "roleId": "role11", "collapsed": true, "children": [
+                            
+                            {"roleName": "roomA", "roleId": "role111", "children": [
+                                    {"roleName": "space heating", "roleId": "role1111", "children": [],"data":"50"},
+                                    {"roleName": "ventilation", "roleId": "role1112", "children": []},
+                                    {"roleName": "air conditioning", "roleId": "role1113", "children": []},
+                                    {"roleName": "lighting", "roleId": "role1114", "children": []}
+                    ]}
+                ]},
+                    {"roleName": "Zonne2", "roleId": "role12", "collapsed": true, "children": [
+                            {"roleName": "roomA", "roleId": "role121", "children": [
+                                    {"roleName": "space heating", "roleId": "role1211", "children": [],"data":"50"},
+                                    {"roleName": "ventilation", "roleId": "role1212", "children": []},
+                                    {"roleName": "air conditioning", "roleId": "role1213", "children": []},
+                                    {"roleName": "lighting", "roleId": "role1214", "children": []}
+                                ]}
+                        ]}
+                ]},
+            {"roleName": "Aci2", "roleId": "role2", "children": [
+                    {"roleName": "Zonne1", "roleId": "role11", "collapsed": true, "children": []},
+                    {"roleName": "zonne2", "roleId": "role12", "children": [
+                            {"roleName": "room1", "roleId": "role121", "children": [
+                                    {"roleName": "comp1", "roleId": "role1211", "children": []},
+                                    {"roleName": "comp2", "roleId": "role1212", "children": []}
+                                ]}
+                        ]}
+                ]},
+            {"roleName": "Aci3", "roleId": "role3", "children": [
+                    {"roleName": "Zonne1", "roleId": "role11", "children": []},
+                    {"roleName": "Zonne2", "roleId": "role12", "collapsed": true, "children": [
+                            {"roleName": "room1", "roleId": "role121", "children": [
+                                    {"roleName": "comp1", "roleId": "role1211", "children": []},
+                                    {"roleName": "comp2", "roleId": "role1212", "children": []}
+                                ]}
+                        ]}
+                ]}
+        ]
